@@ -1,0 +1,304 @@
+ /**
+  	Title:	Pure CSS Joystick SNES
+  	Motive:	Fun :)
+	Author: Christian Herber Santos
+	E-mail: christianherbersantos@gmail.com
+	Date:	06/2015
+  */
+@import url(http://fonts.googleapis.com/css?family=Anton);
+*{
+	margin:0;
+	padding: 0;
+	font-family: 'Anton', sans-serif;
+}
+
+.personagem{
+	width: 75px;
+	height: 100px;
+	background: #A01B07;
+	margin: 50px auto;
+}
+
+.controle{
+	width: 650px;
+	height: 300px;
+	margin: 200px auto;
+}
+.bola-esquerda {
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	background: #CACCD2;
+	float: left;
+	margin: 5px 0 0 0px;
+	box-shadow: inset 9px 3px 11px -6px #aaa;
+	position: relative;
+	z-index: 6;
+}
+.bola-direcional {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background: #bdbdbd;
+	position: relative;
+	z-index: 9999;
+	margin: 47px 0 0 46px;
+	box-shadow: inset 0px 0px 7px #AEACAC;
+	border: 1px solid #bdbdbd;
+}
+.gambi {
+	width: 114px;
+	height: 40px;
+	background: #5B5B5B;
+	position: absolute;
+	z-index: 999991;
+	margin: -97px 0 0 17px;
+}
+.dir-l-r{
+	width: 120px;
+	height: 40px;
+	background: #5B5B5B;
+	position: relative;
+	z-index: 99999;
+	margin: 55px auto;
+	box-shadow: -1px 1px 3px #333;
+	border: 2px solid #333;
+	border-radius: 3px;
+}
+.bola-meio-dir {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background: #5A5A5A;
+	margin: -90px 0 0 59px;
+	position: absolute;
+	z-index: 999999;
+	box-shadow: inset 0px 0px 10px #1F1F1F;
+}
+.dir-u-d{
+	width: 40px;
+	height: 120px;
+	background: #5B5B5B;
+	position: relative;
+	z-index: 99999;
+	margin: -137px auto;
+	box-shadow: -1px 1px 3px #333;
+	border: 2px solid #333;
+	border-radius: 3px;
+}
+.bola-direita {
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	background: #CACCD2;
+	float: right;
+	margin: 5px 0 0 113px;
+	box-shadow: inset -21px 8px 9px -14px #aaa;
+	position: relative;
+	z-index: 6;
+}
+.bg-xy, .bg-ab {
+	width: 50px;
+	height: 135px;
+	border-radius: 25px;
+	background: #CACCD2;
+	-webkit-transform: rotate(50deg);
+	margin: 15px 0 0 59px;
+	position: absolute;
+	border: 1px solid #5A5A5A;
+}
+.bg-ab {
+	margin: 65px 0 0 120px;
+}
+.btn-x, .btn-y {
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	background: #BEB5E0;
+	border-bottom: 1px solid #8983A2;
+	box-shadow: 0px 0px 5px #8983A2;
+	margin: 3px 0px 0 2px;
+}
+.btn-x:hover, .btn-y:hover {
+	background: #8983A2;
+	border-bottom: 1px solid #8983A2;
+	box-shadow: inset 0px 0px 5px #5E5198;
+}
+.btn-b:hover,.btn-a:hover{
+	background: #39256D;
+	border-bottom: 1px solid #39256D;
+	box-shadow: inset 0px 0px 5px #21085F;
+}
+.btn-a, .btn-b {
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	background: #5E4197;
+	border-bottom: 1px solid #39256D;
+	box-shadow: 0px 0px 5px #39256D;
+	margin: 3px 0px 0 2px;
+}
+.btn-y, .btn-b {
+	margin: 38px 0px 0 2px;
+}
+.bola-btns {
+	width: 225px;
+	height: 225px;
+	background: #727089;
+	border-radius: 50%;
+	z-index: 9999;
+	position: relative;
+	margin: 14px 0 0 15px;
+	border: 1px solid #4B4A51;
+	color: #fff;
+}
+.label-btn{
+	-webkit-transform: rotate(-50deg);
+ 	position: absolute;
+ 	font-family: Arial;
+}
+.btn-x .label-btn {
+  margin: -30px 0 0 20px;
+}
+.btn-y .label-btn {
+    margin: 55px 0 0 20px;
+}
+.btn-a .label-btn {
+  margin: -30px 0 0 20px;
+}
+.btn-b .label-btn {
+    margin: 55px 0 0 20px;
+}
+.arrow-r, .arrow-l, .arrow-u, .arrow-d{
+	position: absolute;
+	margin: -89px 0 0 110px;
+	z-index: 999999;
+}
+.arrow-l {
+	margin: -89px 0 0 -1px;
+	-webkit-transform: rotate(180deg);
+}
+.arrow-u {
+	margin: -142px 0 0 56px;
+	-webkit-transform: rotate(-90deg);
+}
+.arrow-d {
+	margin: -33px 0 0 55px;
+	-webkit-transform: rotate(90deg);
+}
+.arrow-r:before, .arrow-l:before, .arrow-u:before, .arrow-d:before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 10px;
+	width: 10px; 
+	height: 0; 
+	border-top: 12px solid transparent;
+	border-bottom: 12px solid transparent;
+	border-left: 20px solid #6E6C6C;
+}
+.arrow-l:before{
+	border-top: 12px solid transparent;
+	border-bottom: 12px solid transparent;
+	border-left: 20px solid #6E6C6C;
+}
+.arrow-u:before{
+	border-top: 12px solid transparent;
+	border-bottom: 12px solid transparent;
+	border-left: 20px solid #6E6C6C;
+}
+.arrow-d:before{
+	border-top: 12px solid transparent;
+	border-bottom: 12px solid transparent;
+	border-left: 20px solid #6E6C6C;
+}
+.contole-meio {
+	width: 420px;
+	height: 220px;
+	background: #CACCD2;
+	position: absolute;
+	z-index: 5;
+	margin: 5px 0 0 113px;
+	box-shadow: inset 0px 0px 9px #aaa;
+}
+.select, .start {
+	width: 15px;
+	height: 40px;
+	background: #333;
+	border-radius: 10px;
+	margin: 60px 0 0 150px;
+	-webkit-transform: rotate(45deg);
+	border: 1px solid #333;
+	box-shadow: inset 1px 0px 5px #000;
+	position: relative;
+	z-index: 99999;
+}
+.select:hover, .start:hover {
+	background: #000;
+	border: 1px solid #000;
+	box-shadow: inset 1px 0px 5px #333;
+}
+.start {
+	margin: -38px 0 0 235px;
+}
+.btn-l {
+	background: #CACCD2;
+	width: 160px;
+	height: 25px;
+	position: absolute;
+	margin: -4px 0 0 90px;
+	border-radius: 47% 4px 0 0;
+	z-index: -1;
+	box-shadow: inset 3px 0px 3px #aaa;
+}
+.btn-r {
+	background: #CACCD2;
+	width: 160px;
+	height: 25px;
+	position: absolute;
+	margin: -3px 0 0 404px;
+	border-radius: 4px 47% 0 0;
+	z-index: -2;
+	box-shadow: inset -3px 0px 3px #aaa;
+}
+.btn-l:hover, .btn-r:hover{
+	margin-top: 0;
+}
+.cable-in{
+	width: 40px;
+	height: 10px;
+	background: #ccc;
+	box-shadow: inset 0px -2px 4px #6C6A6A;
+	margin: auto;
+}
+.snes {
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	font-style: italic;
+	font-size: 28px;
+	color: #333;
+}
+.snes-name {
+	width: 41%;
+	text-align: center;
+	color: #CACCD2;
+	font-size: 10px;
+	letter-spacing: 3px;
+	background: #333;
+	margin: -7px auto;
+	font-style: italic;
+}
+.select-label, .start-label {
+	color: #333;
+	text-align: center;
+	width: 91px;
+	margin: 0 0 0 102px;
+	font-size: 11px;
+	font-style: italic;
+	float: left;
+}
+.start-label {
+	margin: 0 136px 0px 0;
+	float: right;
+}
